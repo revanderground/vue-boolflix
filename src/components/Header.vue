@@ -7,6 +7,7 @@
     <div>
       <input type="text" v-model="needle">
       <button @click="$emit('movieSearch', needle)">Cerca</button>
+   
     </div>
 
   </header>
