@@ -7,7 +7,12 @@
           </div>
           <h5>
             {{movie.title}} - {{movie.original_title}} - {{movie.original_language}} - {{movie.vote_average}}
+        
+             <lang-flag :iso="movie.original_language"  />
+             
           </h5>
+          <p></p>
+
           
       </li>
     </ul>
@@ -22,6 +27,11 @@ export default {
 
         }
    },
+
+  methods: {
+
+  },
+
    props: [
     'movies'
    ]
@@ -34,5 +44,7 @@ export default {
     width: 60%;
     margin: 0 auto;
   }
+
+ 
 
 </style>
