@@ -6,7 +6,7 @@
         <ul>
             <li v-for="movie in movies" :key="movie.id">
               <div class="movie">
-                <img src="" alt="">
+                <img :src="`https://image.tmdb.org/t/p/w342/${movie.poster_path}`" alt="">
               </div>
               <h5>
                 {{movie.title}} - {{movie.original_title}} - {{movie.original_language}} - {{movie.vote_average}}
@@ -27,7 +27,7 @@
         <div> TV SERIES</div>
         <li v-for="serie in series" :key="serie.id">
             <div class="serie">
-              <img src="" alt="">
+              <img :src="`https://image.tmdb.org/t/p/w342/${serie.poster_path}`" alt="">
             </div>
             <h5>
               {{serie.name}} - {{serie.original_name}} - {{serie.original_language}} - {{serie.vote_average}}
