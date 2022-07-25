@@ -1,16 +1,24 @@
 <template>
-  <header>
-    <h2>
-      Boolflix
-    </h2>
+  <header class="py-3">
 
-    <div>
-      <input type="text" v-model="needle">
-      <button @click="$emit('movieSearch', needle)">Cerca</button>
-   
+        <div class="container-header">
+
+      <h2 class="brand">
+        <img class="logo" src="../assets/img/logo-boolfilx.png" alt="logo">
+      </h2>
+
+      <div class="searchbar">
+        <input type="text" v-model="needle">
+        <button @click="$emit('movieSearch', needle)">Cerca</button>
+    
+      </div>
+
     </div>
 
+
   </header>
+
+    
 </template>
 
 <script>
@@ -23,11 +31,30 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+
   header{
+    background-color: black;
+
+  }
+  
+  .container-header{
+    width: 95%;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
   }
+
+  .logo{
+    width: 150px;
+  }
+
+  .searchbar{
+    padding-right: 50px;
+  }
+
+
+
 
 </style>

@@ -35,10 +35,13 @@ export default {
   },
 
   methods: {
+  
 
     getMoviesAndSeries(needle){
       // call server for Movies search
-      axios.get(`${this.apiMovieUrl}?api_key=${this.apiKey}&query=${needle}`)
+      axios
+      .get(`${this.apiMovieUrl}?api_key=${this.apiKey}&query=${needle}`)
+      // .get(this.apiMovieUrl, apiParameters)
       .then((result) => {
         console.log(result.data.results);
         this.movies = result.data.results;
@@ -56,13 +59,24 @@ export default {
       .catch((error) =>{
         console.warn(error)
       })
-    }
+    },
 
+      // search: function (needle) {
+      //   const apiParameters = 
+      //   { 
+      //     paramaters: {
+      //     api_key: this.apiKey,
+      //     language: 'it-IT',
+      //     query: needle
+      //     }
+      //     this.getMoviesAndSeries(apiParameters)
+      //   }
+      // }
 
   }
 }
 </script>
 
 <style lang="scss">
-
+@import "./assets/scss/style.scss"
 </style>

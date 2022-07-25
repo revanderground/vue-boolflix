@@ -1,12 +1,11 @@
 <template>
   <main>
-    
-       
-        <MoviesCard :movies="movies" />
-        <TVSeriesCard :series="series" />
-     
+      <h2 v-if="series.length===0 && movies.length===0"> 
+       Nessun risultato trovato</h2>
 
-
+      <MoviesCard :movies="movies" />
+      <TVSeriesCard :series="series" />
+      
   </main>
 </template>
 
@@ -30,10 +29,7 @@ export default {
    },
 
   methods: {
-      voteIntegers(vote){
-            const voteInt = Math.ceil(vote / 2)
-            return parseInt(voteInt);
-        }
+
   },
 
    props: [
@@ -57,7 +53,5 @@ export default {
     width: 60%;
     margin: 0 auto;
   }
-
- 
 
 </style>
