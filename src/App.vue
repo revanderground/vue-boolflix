@@ -24,8 +24,8 @@ export default {
   data: function(){
         return{
             apiKey: "6316d39114a3b497a4434be7beba0ccf",
-            apiMovieUrl: 'https://api.themoviedb.org/3/search/movie',
-            apiTVSeriesUrl: 'https://api.themoviedb.org/3/search/tv',
+            apiMovieUrl: 'https://api.themoviedb.org/3/search/movie/',
+            apiTVSeriesUrl: 'https://api.themoviedb.org/3/search/tv/',
             
             // api_key=6316d39114a3b497a4434be7beba0ccf&language=en-US&query=prova&page=integer
             movies: [],
@@ -41,7 +41,7 @@ export default {
       // call server for Movies search
       axios
       .get(`${this.apiMovieUrl}?api_key=${this.apiKey}&query=${needle}`)
-      // .get(this.apiMovieUrl, apiParameters)
+
       .then((result) => {
         console.log(result.data.results);
         this.movies = result.data.results;
@@ -61,17 +61,6 @@ export default {
       })
     },
 
-      // search: function (needle) {
-      //   const apiParameters = 
-      //   { 
-      //     paramaters: {
-      //     api_key: this.apiKey,
-      //     language: 'it-IT',
-      //     query: needle
-      //     }
-      //     this.getMoviesAndSeries(apiParameters)
-      //   }
-      // }
 
   }
 }
@@ -79,4 +68,5 @@ export default {
 
 <style lang="scss">
 @import "./assets/scss/style.scss"
+    
 </style>

@@ -33,8 +33,11 @@ export default {
 
 <style lang="scss" scoped>
 
+
+
   header{
     background-color: black;
+    height: 15vh;;
 
   }
   
@@ -44,7 +47,7 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+  }  
 
   .logo{
     width: 150px;
