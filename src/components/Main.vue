@@ -57,14 +57,14 @@ export default {
 <style lang="scss" scoped>
   main{
     background-color: rgb(5, 68, 95);
-    height:calc(100vh - 15vh);
+    
   }
 
   .container.fluid{
     width: 100%;
     margin: 0 auto;
-    height:calc(100vh - 15vh);
     background-color: rgb(5, 68, 95);
+    height:calc(100vh - 15vh);
   }
 
 
