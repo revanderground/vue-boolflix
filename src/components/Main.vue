@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div class="container">
+    <div class="container.fluid">
 
       <h2 v-if="series.length===0 && movies.length===0"> 
        Nessun risultato trovato</h2>
@@ -55,17 +55,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  *{
+  main{
     background-color: rgb(5, 68, 95);
-
+    height:calc(100vh - 15vh);
   }
 
-  .container{
-    width: 60%;
+  .container.fluid{
+    width: 100%;
     margin: 0 auto;
     height:calc(100vh - 15vh);
-    
-
+    background-color: rgb(5, 68, 95);
   }
 
 
