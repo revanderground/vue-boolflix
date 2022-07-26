@@ -6,8 +6,7 @@
        Nessun risultato trovato</h2>
       
       <div class="cards">
-        <MoviesCard :movies="movies" />
-        <TVSeriesCard :series="series" />
+        <Cards :movies="movies" :series="series"  />
       </div>
 
 
@@ -20,14 +19,13 @@
 
 <script>
 
-import MoviesCard from './MoviesCard.vue';
-import TVSeriesCard from './TVSeriesCard.vue';
+import Cards from './Cards.vue';
+
 
 export default {
 
   components: {
-    MoviesCard,
-    TVSeriesCard
+    Cards,
   },
 
 
