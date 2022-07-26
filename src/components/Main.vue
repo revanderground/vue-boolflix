@@ -4,6 +4,7 @@
 
       <h2 v-if="series.length===0 && movies.length===0"> 
        Nessun risultato trovato</h2>
+      
       <div class="cards">
         <MoviesCard :movies="movies" />
         <TVSeriesCard :series="series" />
@@ -63,13 +64,12 @@ export default {
   }
 
   .container.fluid{
-    width: 100%;
     margin: 0 auto;
-    height:calc(100vh - 15vh);
+
   }
 
   .cards{
-    height:calc(100vh - 15vh);
+    height:calc(85vh - 47px);
   }
 
 

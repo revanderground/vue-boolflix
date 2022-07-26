@@ -48,6 +48,9 @@ export default {
 </script>
 
 
-<style>
+<style lang="scss" scoped>
+    section{
+           background-color: rgb(5, 68, 95);
+    }
 
 </style>
