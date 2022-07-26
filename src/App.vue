@@ -39,8 +39,14 @@ export default {
 
     getMoviesAndSeries(needle){
       // call server for Movies search
-      axios
-      .get(`${this.apiMovieUrl}?api_key=${this.apiKey}&query=${needle}`)
+      axios.get(this.apiMovieUrl, {
+        params:{
+          api_key: this.apiKey,
+          language: 'it-IT',
+          query: needle
+        }
+      })
+      // .get(`${this.apiMovieUrl}?api_key=${this.apiKey}&query=${needle}`)
 
       .then((result) => {
         console.log(result.data.results);
